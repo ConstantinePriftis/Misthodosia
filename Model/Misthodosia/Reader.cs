@@ -70,7 +70,6 @@ namespace Misthodosia
             foreach (var item in employees)
             {
                 if (NameExists(name))
-                    return item;
                     return item
                         ;
             }

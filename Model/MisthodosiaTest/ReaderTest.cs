@@ -27,9 +27,6 @@ namespace MisthodosiaTest
             Reader read = new Reader();
             read.PopulateEmployees();
             int expected = 4;
-=======
-            Reader read = new Reader(); 
->>>>>>> origin/master
 
             //Act          
             Employee actual = read.SearchById(4);

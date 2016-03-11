@@ -53,7 +53,6 @@ namespace MistodosiaUserInterface
         public static void searchEmployee()
         {
             Reader rd = new Reader();
-            rd.PopulateEmployees();
             Console.WriteLine("Search by 'id' or 'name' or 'surname' or 'greater/less salary'");
             string s = Console.ReadLine();
             switch (s)
@@ -63,7 +62,6 @@ namespace MistodosiaUserInterface
                     string tmpID = Console.ReadLine();
                     int id = Convert.ToInt32(tmpID);
                     Employee tmp = rd.SearchById(id);
-                    //Console.WriteLine(tmp);
                     Console.WriteLine(tmp.ToString());
                     
                     break;
@@ -71,7 +69,6 @@ namespace MistodosiaUserInterface
                 case "name":
                     Console.WriteLine("Type the Name");
                     string tmpName = Console.ReadLine();
-                    //Console.WriteLine(rd.SearchById(tmpName));
                     Employee tmp4 = rd.SearchByName(tmpName);
                     Console.WriteLine(tmp4.ToString());
 
@@ -92,7 +89,6 @@ namespace MistodosiaUserInterface
                     decimal tmpDec = Convert.ToDecimal(tmp2);
                    // rd.MoreWage(tmpDec);
 
-                    Console.WriteLine(tmpDec);
                     Console.WriteLine(rd.MoreWage(tmpDec));
 
                     break;
