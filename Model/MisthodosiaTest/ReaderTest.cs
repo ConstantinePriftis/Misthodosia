@@ -34,26 +34,27 @@ namespace MisthodosiaTest
             //Assert
             Assert.AreEqual(expected, actual.ID);
         }
-        [TestMethod]
-        public void LessWageTest()
-        {
-            //Arrange
-            Reader read = new Reader();
-            //Act
-            Employee actual = read.LessWage(1500);
-            //Assert
-            Assert.IsNotNull(actual);
-        }
-        [TestMethod]
-        public void MoreWageTest()
-        {
-            //Arrange
-            Reader read = new Reader();
-            //Act
-            Employee actual = read.MoreWage(2000);
-            //Assert
-            Assert.IsNotNull(actual);  
-        }
+       
+        //public void LessWageTest()
+        //{
+        //    //Arrange
+        //    Reader read = new Reader();
+        //    //Act
+        //    Employee actual = read.LessWage(1500);
+        //    //Assert
+        //    Assert.IsNotNull(actual);
+        //}
+        //[TestMethod]
+        //public void MoreWageTest()
+        //{
+        //    //Arrange
+        //    Reader read = new Reader();
+        //    //Act
+        //    Employee actual = read.MoreWage(2000);
+        //    //Assert
+        //    Assert.IsNotNull(actual);  
+        //}
+        
 
     }
 }

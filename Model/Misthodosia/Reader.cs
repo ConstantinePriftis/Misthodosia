@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace Misthodosia
 {
@@ -94,23 +95,26 @@ namespace Misthodosia
             return null;
         }
 
-        public Employee LessWage(decimal wage)
+        public List<Employee> LessWage(decimal wage)
         {
+            List<Employee> emp = new List<Employee>();
             foreach (var item in employees)
             {
                 if (item.Wage <= wage)
-                    return item;
+                    emp.Add(item);
             }
-            return null;
+            return emp;
         }
-        public Employee MoreWage(decimal wage)
+        public List<Employee> MoreWage(decimal wage)
         {
+            List<Employee> emp = new List<Employee>();
             foreach (var item in employees)
             {
                 if (item.Wage >= wage)
-                    return item;
+                    emp.Add(item);
+                
             }
-            return null;
+            return emp;
         }
         
 
