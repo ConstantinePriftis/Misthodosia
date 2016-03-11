@@ -22,13 +22,10 @@ namespace MisthodosiaTest
         public void SearchByIdTest()
         {
             //Arrange
-<<<<<<< HEAD
+
             Reader read = new Reader();
             read.PopulateEmployees();
             int expected = 4;
-=======
-            Reader read = new Reader(); 
->>>>>>> origin/master
             //Act          
             Employee actual = read.SearchById(4);
             //Assert
