@@ -22,7 +22,6 @@ namespace MisthodosiaTest
         public void SearchByIdTest()
         {
             //Arrange
-<<<<<<< HEAD
 
             Reader read = new Reader();
             read.PopulateEmployees();
