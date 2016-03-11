@@ -12,7 +12,9 @@ namespace Misthodosia
         Employee[] employees;
         public Reader()
         {
-            employees = new Employee[5];
+           
+            employees = new Employee[10];
+            PopulateEmployees();
         }
 
         public void PopulateEmployees()
@@ -31,14 +33,13 @@ namespace Misthodosia
         }
         public Employee[] GetAllEmployees()
         {
-            return employees;
-
+            return employees; 
         }
         public bool IdExists(int id)
         { 
             foreach (var item in employees)
             {
-                //edo thelei allagei
+                
                 if (id == item.ID)
                     return true;
             }
@@ -55,6 +56,63 @@ namespace Misthodosia
             }
             return null;
         }
+        public bool NameExists(string name)
+        {
+            foreach (var item in employees)
+            {
+                if (name == item.Name)
+                    return true;
+            }
+            return false;
+        }
+        public Employee SearchByName(string name)
+        {
+            foreach (var item in employees)
+            {
+                if (NameExists(name))
+                    return item;
+            }
+            return null;
+        }
+
+        public bool SurNameExists(string surname)
+        {
+            foreach (var item in employees)
+            {
+                if (surname == item.SurName)
+                    return true;
+            }
+            return false;
+        }
+        public Employee SearchBySurname(string surname)
+        {
+            foreach (var item in employees)
+            {
+                if (SurNameExists(surname))
+                    return item;
+            }
+            return null;
+        }
+
+        public Employee LessWage(decimal wage)
+        {
+            foreach (var item in employees)
+            {
+                if (item.Wage <= wage)
+                    return item;
+            }
+            return null;
+        }
+        public Employee MoreWage(decimal wage)
+        {
+            foreach (var item in employees)
+            {
+                if (item.Wage >= wage)
+                    return item;
+            }
+            return null;
+        }
+        
 
     }
 }
