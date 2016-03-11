@@ -64,6 +64,7 @@ namespace MistodosiaUserInterface
                     int id = Convert.ToInt32(tmpID);
                     Employee tmp = rd.SearchById(id);
                     //Console.WriteLine(tmp);
+                    Console.WriteLine(tmp.ToString());
                     
                     break;
 
@@ -71,6 +72,8 @@ namespace MistodosiaUserInterface
                     Console.WriteLine("Type the Name");
                     string tmpName = Console.ReadLine();
                     //Console.WriteLine(rd.SearchById(tmpName));
+                    Employee tmp4 = rd.SearchByName(tmpName);
+                    Console.WriteLine(tmp4.ToString());
 
                     break;
 
@@ -78,6 +81,8 @@ namespace MistodosiaUserInterface
                     Console.WriteLine("Type the Surname");
                     string tmpSurname = Console.ReadLine();
                     //Console.WriteLine(rd.SearchById(tmpSurname));
+                    Employee tmp5 = rd.SearchBySurname(tmpSurname);
+                    Console.WriteLine(tmp5.ToString());
 
                     break;
 
@@ -85,8 +90,10 @@ namespace MistodosiaUserInterface
                     Console.WriteLine("Type the amound");
                     string tmp2 = Console.ReadLine();
                     decimal tmpDec = Convert.ToDecimal(tmp2);
+                   // rd.MoreWage(tmpDec);
 
                     Console.WriteLine(tmpDec);
+                    Console.WriteLine(rd.MoreWage(tmpDec));
 
                     break;
 

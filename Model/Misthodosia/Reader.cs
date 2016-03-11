@@ -71,6 +71,8 @@ namespace Misthodosia
             {
                 if (NameExists(name))
                     return item;
+                    return item
+                        ;
             }
             return null;
         }
