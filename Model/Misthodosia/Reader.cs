@@ -41,7 +41,7 @@ namespace Misthodosia
             {
                 //edo thelei allagei
                 if (id == item.ID)
-                    return exists = true;
+                   exists = true;
 
             }
             return exists;
