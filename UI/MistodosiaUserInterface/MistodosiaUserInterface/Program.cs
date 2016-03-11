@@ -88,8 +88,12 @@ namespace MistodosiaUserInterface
                     string tmp2 = Console.ReadLine();
                     decimal tmpDec = Convert.ToDecimal(tmp2);
                    // rd.MoreWage(tmpDec);
+                    List<Employee> listTmp = rd.MoreWage(tmpDec);
 
-                    Console.WriteLine(rd.MoreWage(tmpDec));
+                    foreach (var item in listTmp)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
 
                     break;
 
