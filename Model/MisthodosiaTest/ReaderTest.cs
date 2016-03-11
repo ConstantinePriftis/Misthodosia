@@ -13,7 +13,6 @@ namespace MisthodosiaTest
             //Arrange
             Reader read = new Reader();
             bool expected = true;
-            read.PopulateEmployees();
             //Act
             bool actual = read.IdExists(4);
             //Assert
@@ -23,13 +22,38 @@ namespace MisthodosiaTest
         public void SearchByIdTest()
         {
             //Arrange
+<<<<<<< HEAD
             Reader read = new Reader();
             read.PopulateEmployees();
             int expected = 4;
+=======
+            Reader read = new Reader(); 
+>>>>>>> origin/master
             //Act          
             Employee actual = read.SearchById(4);
             //Assert
             Assert.AreEqual(expected, actual.ID);
         }
+        [TestMethod]
+        public void LessWageTest()
+        {
+            //Arrange
+            Reader read = new Reader();
+            //Act
+            Employee actual = read.LessWage(1500);
+            //Assert
+            Assert.IsNotNull(actual);
+        }
+        [TestMethod]
+        public void MoreWageTest()
+        {
+            //Arrange
+            Reader read = new Reader();
+            //Act
+            Employee actual = read.MoreWage(2000);
+            //Assert
+            Assert.IsNotNull(actual);  
+        }
+
     }
 }
