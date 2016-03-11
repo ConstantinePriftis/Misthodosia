@@ -34,6 +34,24 @@ namespace Misthodosia
             return employees;
             
         }
+        public bool IdExists(int id)
+        {
+            bool exists = false;
+            foreach (var item in employees)
+            {
+                if (id == item.ID)
+                    return exists = true;
+
+            }
+            return exists;
+        }
+        public Employee SearchById(int id)
+        {
+            foreach (var item in employees)
+            {
+                if()
+            }
+        }
         
     }
 }
