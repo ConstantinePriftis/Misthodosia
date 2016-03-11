@@ -13,7 +13,7 @@ namespace Misthodosia
         Employee[] employees;
         public Reader()
         {
-           
+
             employees = new Employee[5];
             PopulateEmployees();
 
@@ -35,13 +35,13 @@ namespace Misthodosia
         }
         public Employee[] GetAllEmployees()
         {
-            return employees; 
+            return employees;
         }
         public bool IdExists(int id)
-        { 
+        {
             foreach (var item in employees)
             {
-                
+
                 if (id == item.ID)
                     return true;
             }
@@ -113,11 +113,15 @@ namespace Misthodosia
             {
                 if (item.Wage >= wage)
                     emp.Add(item);
-                
+
             }
             return emp;
         }
-        
+        public void TestMethod()
+        {
 
+        }
     }
 }
+        
+    
