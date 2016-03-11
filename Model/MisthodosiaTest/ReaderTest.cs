@@ -26,10 +26,12 @@ namespace MisthodosiaTest
             Reader read = new Reader();
             read.PopulateEmployees();
             Employee expected = null; 
+            int expected = 4;
             //Act          
             Employee actual = read.SearchById(4);
             //Assert
             Assert.IsNotNull(actual);
+            Assert.AreEqual(expected, actual.ID);
         }
     }
 }

@@ -44,7 +44,6 @@ namespace MistodosiaUserInterface
         {
             Reader rd = new Reader();
             Console.WriteLine(rd.GetAllEmployees());
-            rd.PopulateEmployees();
             foreach (var item in rd.GetAllEmployees())
             {
                 Console.WriteLine(item.ID + " " + item.Name + " " + item.SurName + " " + item.Wage);
@@ -54,37 +53,49 @@ namespace MistodosiaUserInterface
         public static void searchEmployee()
         {
             Reader rd = new Reader();
-            Console.WriteLine("Type 'id' or 'name' or 'surname' or 'salary'");
+            rd.PopulateEmployees();
+            Console.WriteLine("Search by 'id' or 'name' or 'surname' or 'greater/less salary'");
             string s = Console.ReadLine();
             switch (s)
             {
                 case "id":
                     Console.WriteLine("Type the ID");
-                    //if id exists print the employee
-                    //else print not valid id
                     string tmpID = Console.ReadLine();
                     int id = Convert.ToInt32(tmpID);
-                    //rd.SearchById(id);
-                    Console.WriteLine(rd.SearchById(id));
+                    Employee tmp = rd.SearchById(id);
+                    //Console.WriteLine(tmp);
                     
                     break;
 
                 case "name":
-                    //if name exists print the employee
-                    //else print not valid id
-                    Console.WriteLine("searching");
+                    Console.WriteLine("Type the Name");
+                    string tmpName = Console.ReadLine();
+                    //Console.WriteLine(rd.SearchById(tmpName));
+
                     break;
 
                 case "surname":
-                    //if surname exists print the employee
-                    //else print not valid id
-                    Console.WriteLine("searching");
+                    Console.WriteLine("Type the Surname");
+                    string tmpSurname = Console.ReadLine();
+                    //Console.WriteLine(rd.SearchById(tmpSurname));
+
                     break;
 
-                case "salary":
-                    //if salary exists print the employee
-                    //else print not valid id
-                    Console.WriteLine("searching");
+                case "greater salary":
+                    Console.WriteLine("Type the amound");
+                    string tmp2 = Console.ReadLine();
+                    decimal tmpDec = Convert.ToDecimal(tmp2);
+
+                    Console.WriteLine(tmpDec);
+
+                    break;
+
+                case "less salary":
+                    Console.WriteLine("Type the amound");
+                    string tmp3 = Console.ReadLine();
+                    decimal tmpDec2 = Convert.ToDecimal(tmp3);
+                    Console.WriteLine(tmpDec2);
+                    
                     break;
 
                 default:
