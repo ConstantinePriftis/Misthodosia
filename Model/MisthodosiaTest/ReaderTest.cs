@@ -17,6 +17,7 @@ namespace MisthodosiaTest
             bool actual = read.IdExists(4);
             //Assert
             Assert.AreEqual(expected, actual);
+
         }
         [TestMethod]
         public void SearchByIdTest()

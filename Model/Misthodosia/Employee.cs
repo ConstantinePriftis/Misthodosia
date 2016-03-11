@@ -19,6 +19,7 @@ namespace Misthodosia
             this.SurName = surName;
             this.Wage = wage;
         }
+
         public override string ToString()
         {
             return "ID: " + ID + "Name: " + Name + "Surname: " + SurName + "Wage: " + Wage;

@@ -16,6 +16,7 @@ namespace Misthodosia
            
             employees = new Employee[5];
             PopulateEmployees();
+
         }
 
         public void PopulateEmployees()
