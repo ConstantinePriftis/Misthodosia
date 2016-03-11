@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Misthodosia;
+using Misthodosia;
 
 
 namespace MistodosiaUserInterface
@@ -42,25 +42,31 @@ namespace MistodosiaUserInterface
 
         public static void printAllEmployees()
         {
-            //Reader rd = new Reader();
-            //Console.WriteLine(rd.GetAllEmployees());
-            //rd.PopulateEmployees();
-            //foreach (var item in rd.GetAllEmployees())
-            //{
-                //Console.WriteLine(item.ID + " " + item.Name + " " + item.SurName + " " + item.Wage);
-            //}
+            Reader rd = new Reader();
+            Console.WriteLine(rd.GetAllEmployees());
+            rd.PopulateEmployees();
+            foreach (var item in rd.GetAllEmployees())
+            {
+                Console.WriteLine(item.ID + " " + item.Name + " " + item.SurName + " " + item.Wage);
+            }
         }
 
         public static void searchEmployee()
         {
+            Reader rd = new Reader();
             Console.WriteLine("Type 'id' or 'name' or 'surname' or 'salary'");
             string s = Console.ReadLine();
             switch (s)
             {
                 case "id":
+                    Console.WriteLine("Type the ID");
                     //if id exists print the employee
                     //else print not valid id
-                    Console.WriteLine("searching");
+                    string tmpID = Console.ReadLine();
+                    int id = Convert.ToInt32(tmpID);
+                    //rd.SearchById(id);
+                    Console.WriteLine(rd.SearchById(id));
+                    
                     break;
 
                 case "name":

@@ -39,6 +39,7 @@ namespace Misthodosia
             bool exists = false;
             foreach (var item in employees)
             {
+                //edo thelei allagei
                 if (id == item.ID)
                     return exists = true;
 
