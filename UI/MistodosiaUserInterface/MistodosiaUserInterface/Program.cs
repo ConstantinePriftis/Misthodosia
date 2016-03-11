@@ -57,6 +57,7 @@ namespace MistodosiaUserInterface
             string s = Console.ReadLine();
             switch (s)
             {
+                    //test com
                 case "id":
                     Console.WriteLine("Type the ID");
                     string tmpID = Console.ReadLine();
