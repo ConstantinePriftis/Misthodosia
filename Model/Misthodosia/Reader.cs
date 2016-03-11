@@ -14,7 +14,7 @@ namespace Misthodosia
         {
             employees = new Employee[5];
         }
-        
+
         public void PopulateEmployees()
         {
             int counter = 0;
@@ -32,19 +32,17 @@ namespace Misthodosia
         public Employee[] GetAllEmployees()
         {
             return employees;
-            
+
         }
         public bool IdExists(int id)
-        {
-            bool exists = false;
+        { 
             foreach (var item in employees)
             {
                 //edo thelei allagei
                 if (id == item.ID)
-                   exists = true;
-
+                    return true;
             }
-            return exists;
+            return false;
         }
         //Den katalaveno ti ennoeis edo
         public Employee SearchById(int id)
@@ -56,6 +54,6 @@ namespace Misthodosia
             }
             return null;
         }
-        
+
     }
 }
