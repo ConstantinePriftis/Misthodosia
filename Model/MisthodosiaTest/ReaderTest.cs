@@ -6,15 +6,30 @@ namespace MisthodosiaTest
     [TestClass]
     public class ReaderTest
     {
-        
+
         [TestMethod]
         public void IdExistsTest()
         {
             //Arrange
             Reader read = new Reader();
+            bool expected = true;
+            read.PopulateEmployees();
             //Act
-
+            bool actual = read.IdExists(4);
             //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void SearchByIdTest()
+        {
+            //Arrange
+            Reader read = new Reader();
+            read.PopulateEmployees();
+            Employee expected = null; 
+            //Act          
+            Employee actual = read.SearchById(4);
+            //Assert
+            Assert.IsNotNull(actual);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Misthodosia
         public void PopulateEmployees()
         {
             int counter = 0;
-            foreach (string line in File.ReadLines("EmployeesDatabase.txt"))
+            foreach (string line in File.ReadLines(@"EmployeesDatabase.txt"))
             {
                 string[] tmp = line.Split(',');
                 int tmpid = Convert.ToInt32(tmp[0]);
