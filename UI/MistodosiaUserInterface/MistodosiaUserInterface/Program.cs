@@ -78,7 +78,6 @@ namespace MistodosiaUserInterface
                 case "surname":
                     Console.WriteLine("Type the Surname");
                     string tmpSurname = Console.ReadLine();
-                    //Console.WriteLine(rd.SearchById(tmpSurname));
                     Employee tmp5 = rd.SearchBySurname(tmpSurname);
                     Console.WriteLine(tmp5.ToString());
 
@@ -88,7 +87,6 @@ namespace MistodosiaUserInterface
                     Console.WriteLine("Type the amound");
                     string tmp2 = Console.ReadLine();
                     decimal tmpDec = Convert.ToDecimal(tmp2);
-                   // rd.MoreWage(tmpDec);
                     List<Employee> listTmp = rd.MoreWage(tmpDec);
 
                     foreach (var item in listTmp)
@@ -102,7 +100,12 @@ namespace MistodosiaUserInterface
                     Console.WriteLine("Type the amound");
                     string tmp3 = Console.ReadLine();
                     decimal tmpDec2 = Convert.ToDecimal(tmp3);
-                    Console.WriteLine(tmpDec2);
+                    List<Employee> listTmp2 = rd.LessWage(tmpDec2);
+
+                    foreach (var item in listTmp2)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
                     
                     break;
 
