@@ -14,7 +14,7 @@ namespace Misthodosia
         public Reader()
         {
            
-            employees = new Employee[10];
+            employees = new Employee[5];
             PopulateEmployees();
         }
 
