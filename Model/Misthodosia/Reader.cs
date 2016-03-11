@@ -49,8 +49,10 @@ namespace Misthodosia
         {
             foreach (var item in employees)
             {
-                if()
+                if (IdExists(id))
+                    return item;
             }
+            return null;
         }
         
     }
